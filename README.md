@@ -45,6 +45,7 @@ cd StrabismusSimulator
 # 両方のマイクロコントローラにArduinoコードをアップロード
 # Python依存関係をインストール
 pip install -r requirements.txt
+```
 
 -------- English ver ----------
 
