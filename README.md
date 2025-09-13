@@ -1,3 +1,53 @@
+-------- Japanese ver ----------
+# 斜視シミュレータ - オープンソースハードウェアプラットフォーム
+
+斜視患者向け単眼視線推定AIモデルの体系的評価のためのオープンソースハードウェアプラットフォーム
+
+## 概要
+
+本プロジェクトは、斜視患者特有の眼球運動条件下で単眼視線推定AIモデルを評価するための低コストオープンソース斜視シミュレータを提供します。正常両眼視を前提とした既存シミュレータとは異なり、本システムは斜視患者特有の非共役眼球運動を忠実に再現できます。
+
+## 主な特徴
+
+- **独立両眼制御**: 2つの独立制御可能な人工眼球
+- **高精度**: ジャイロフィードバックによる0.1度以下の機械的精度
+- **低コスト**: 総製作費約200ドル
+- **オープンソース**: 完全なハードウェア設計とソフトウェアを公開
+- **リアルタイムフィードバック**: 100HzでのMPU6050六軸ジャイロセンサ
+
+## システム要件
+
+### ハードウェア部品
+- Arduino Nano マイクロコントローラ × 2
+- MPU6050 六軸ジャイロセンサ × 2
+- FS0307 サーボモータ × 4
+- 人工眼球（Real Eye） × 2
+- 3Dプリント材料（PLAフィラメント約300g）
+- ブレッドボードと配線材料
+
+### ソフトウェア要件
+- Arduino IDE 1.8以上
+- Python 3.7以上
+- OpenCV 4.0以上
+
+## インストール
+
+### 1. ハードウェア組み立て
+1. 提供されるSTLファイルを使用してすべての部品を3Dプリント
+2. 2軸ジンバル機構を組み立て
+3. サーボモータとジャイロセンサを取り付け
+4. 配線図に従って回路を接続
+
+### 2. ソフトウェアセットアップ
+```bash
+git clone https://github.com/namihira33/StrabismusSimulator.git
+cd StrabismusSimulator
+# 両方のマイクロコントローラにArduinoコードをアップロード
+# Python依存関係をインストール
+pip install -r requirements.txt
+
+-------- English ver ----------
+
 # Strabismus Simulator - Open Source Hardware Platform
 
 An open-source hardware platform for systematic evaluation of monocular gaze estimation AI models under strabismus conditions.
